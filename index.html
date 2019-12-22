@@ -1,0 +1,94 @@
+<!--
+         Email:utsav_patel@student.uml.edu
+           Name: Utsav Patel
+           I am a junior/senoir at Umass Lowell in  91.61 GUI Programming I
+           91.461 Assignment:  Creating Your First Web Page
+           Utsav Patel, UMass Lowell Computer Science, upatel@cs.uml.edu
+           Copyright (c) 2019 by Utsav Patel.  All rights reserved.  May be
+           freely copied or excerpted for educational purposes with credit to
+           the author.
+           updated by UP on december 20th, 2019 at 9:23 AM
+           This website was checked using validator.nu which provided no errors
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrabble Game</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="css/hw9.css">
+    </head>
+    <body>
+        <h1 class="heading"> Drag-and-Drop Scrabble </h1>
+        <!-- This will be printing the letter, score, and tiles left on the side -->
+        <div class="words">
+          <b>Vertical letters:</b><span id="verticalletters"></span>
+          <br>
+          <b>Horizontal letters:</b><span id="horizontalletters"></span>
+          <br>
+          <b>Score:</b><span id="scoretrack"></span>
+          <br>
+          <b> Tiles left:</b><span id="tilecount"></span></div>
+          <div id="dict"></div>
+          <!-- This will be stating game rules -->
+          <p class="paragraph"><span class="title">Game Rules:</span> <br>
+              <span class="beginning">
+              Start:</span>
+              <br>
+              <span class="points">
+              the user has been given tiles in which they have to make a word which may be found in dictionary
+            and view score when playing <br>
+            <span class="beginning">
+            Reset: <br></span>
+            The user at any point in the game can restart and it will restart the game<br>
+            <span class="beginning">
+            Next level:<br></span>
+            When next word is clicked it will take the user to the next stage of the Game
+            and save the score as well.
+            <span class="points">
+              <br>
+              <span class="games"> Scroll down To Play the Game</span>
+          </p>
+<!-- This will be creating the board which will have a height of 54 and width being 54-->
+        <div class ="boards"id="scrabbleboard">
+            <table id="table">
+                <tr>
+                    <td> <image id="0" class="blocks" src="images/Scrabble_Tile_Blank.jpg" height="54" width="54"></td></tr>
+                <tr>
+                    <td> <image id="1" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+                </tr>
+                <tr>
+                    <td> <image id="2" class="blocks" src="images/doubleletter.png"  height="54" width="54"></td>
+                     </tr>
+                <tr>
+                    <td> <image id="3" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>  </tr>
+                <tr>
+                    <td> <image id="4" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td> </tr>
+                <tr>
+                    <td> <image id="5" class="blocks" src="images/doubleword.png"  height="54" width="54"></td>  </tr>
+                <tr>
+                    <td> <image id="6" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+                    <td> <image id="7" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+                    <td> <image id="8" class="blocks" src="images/doubleletter.png"  height="54" width="54"></td>
+                    <td> <image id="9" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+		                  <td> <image id="10" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+                    <td> <image id="11" class="blocks" src="images/doubleword.png"  height="54" width="54"></td>
+                    <td> <image id="12" class="blocks" src="images/Scrabble_Tile_Blank.jpg"  height="54" width="54"></td>
+
+                </tr>
+            </table>
+            <!-- All the buttons will be there so it is accessable to the user  -->
+            <input class="start" type="button" value="Reset/Start" onclick="resetgame()" id="start">
+            <input class ="submit"type="button" value="Check/Submit " onclick="submit()" id="submit">
+            <input type="button"  class="nextlevel"  value="Next Word" onclick="nextlevel()" id="nextlevel">
+        </div>
+
+        <br/>
+        <div id="titlerack" class="rack"></div>
+        <script  src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+          <script src="js/dictionary.js"></script>
+        <script src="js/hw9.js"></script>
+    </body>
+</html>
